@@ -4,7 +4,7 @@ const robot = require('robotjs');
 const Server = require('./server');
 
 const iconOn = path.resolve(__dirname, '../client/assets/trayon.png');
-const iconOff = path.resolve(__dirname, '../client/assets/trayoff.png');
+const iconOff = process.platform === 'darwin' ? path.resolve(__dirname, '../client/assets/trayoff.png') : iconOn;
 
 class JoyCon {
     constructor() {
