@@ -1,0 +1,40 @@
+html {
+    overflow: hidden !important;
+    height: 100vh;
+}
+
+body {
+    margin: 0 !important;
+    height: 100vh !important;
+    background: #444 !important;
+    display: flex !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+    text-align: center;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+:focus {
+    outline: none !important;
+}
+
+div.controller {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+button {
+    border: none;
+}
+
+button:active {
+    filter: brightness(0.8);
+}

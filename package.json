@@ -1,0 +1,43 @@
+{
+  "name": "joycon",
+  "version": "1.0.0",
+  "author": "Mark Auger",
+  "license": "MIT",
+  "description": "JoyCon is a mobile controller for your computer",
+  "main": "app.js",
+  "scripts": {
+    "dev": "electron .",
+    "troubleshoot": "rm -rf node_modules && npm i && ./node_modules/.bin/electron-rebuild",
+    "build": "electron-builder -mwl",
+    "build:mac": "electron-builder -m",
+    "build:win": "electron-builder -w",
+    "build:lin": "electron-builder -l"
+  },
+  "build": {
+    "appId": "com.swimauger.joycon",
+    "productName": "JoyCon",
+    "copyright": "Copyright © 2020 JoyCon by Mark Auger",
+    "npmRebuild": false,
+    "mac": {
+      "target": "dmg",
+      "icon": "app/client/assets/icon.icns"
+    },
+    "win": {
+      "target": "msi",
+      "icon": "app/client/assets/icon.ico"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "app/client/assets/icon.png"
+    }
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "robotjs": "^0.6.0"
+  },
+  "devDependencies": {
+    "electron": "^8.2.5",
+    "electron-builder": "^22.6.0",
+    "electron-rebuild": "^1.11.0"
+  }
+}
